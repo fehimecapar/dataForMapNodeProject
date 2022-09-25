@@ -1,0 +1,33 @@
+{
+  "name": "bul_map_node_postgresql",
+  "version": "1.0.0",
+  "description": "To make it easy for you to get started with GitLab, here's a list of recommended next steps.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/fehime/bul_map_node_postgresql.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/fehime/bul_map_node_postgresql/issues"
+  },
+  "homepage": "https://gitlab.com/fehime/bul_map_node_postgresql#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "prisma": "^3.11.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.11.0",
+    "autocomplete": "0.0.1",
+    "autocompleter": "^6.1.2",
+    "axios": "^0.26.1",
+    "fastify": "^3.27.4",
+    "fastify-cors": "^6.0.3",
+    "unidecode": "^0.1.8"
+  }
+}

@@ -1,0 +1,98 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+model towns {
+
+  id  Int @id
+  il_adi  String
+  il_id Int
+  ilce_adi  String
+  ilce_id Int
+  mahalle_adi  String
+  last_modified  String
+
+}
+model location{
+
+  id  Int @id
+  lat Decimal
+  lng Decimal
+  
+}
+
+model alldata{
+  id  Int @id
+  il_adi  String
+  il_id Int
+  ilce_adi  String
+  ilce_id Int
+  mahalle_adi  String
+  lat Decimal
+  lng Decimal
+  last_modified  String
+}
+
+//bu sayfada yaptığım her değişiklikten sonra aşağıdaki komutu çalıştırmam gerekecek 
+// npx prisma migrate dev --name init bunu çalıştırmadan önce cd komutu ile prisma klasörünün içine gir.
+
+// /*	
+// 	csv dosyasındaki veriler import edilerek node tarafında oluşturulan towns modelinin verileri tabloya eklendi
+// 	aynı yöntem ile node tarafında oluşturulan location modelinin verileri de ilgili tabloya eklendi
+
+// COPY public.alldata(id,il_adi,il_id,ilce_adi,ilce_id,mahalle_adi) FROM 'C:\Users\Public\mahalleler.csv' WITH (FORMAT csv);
+
+// */
+
+// /*
+// 	iki tablo birleştirerek yeni tablo uluşturuldu
+	
+// CREATE TABLE "alldata" AS
+// 	SELECT
+// 		towns.id,
+// 		il_adi,
+// 		il_id,
+// 		ilce_adi,
+// 		ilce_id,
+// 		mahalle_adi,
+// 		lat,
+// 		lng
+// 	FROM
+// 		towns
+// 	INNER JOIN location 
+// 		ON "location".id = towns.id
+// 	ORDER BY il_adi;
+// */
+
+// -- towns ve location tabloları birleştirilerek alldata tablosunun verileri girildi
+// /*INSERT INTO "alldata"
+// 	("id",
+// 	il_adi,
+// 	il_id,
+// 	ilce_adi,
+// 	ilce_id,
+// 	mahalle_adi,
+// 	lat,
+// 	lng)
+// 	SELECT
+// 		towns.id,
+// 		il_adi,
+// 		il_id,
+// 		ilce_adi,
+// 		ilce_id,
+// 		mahalle_adi,
+// 		lat,
+// 		lng
+// 	FROM
+// 		towns
+// 	INNER JOIN location 
+// 		ON "location".id = towns.id
+// 	ORDER BY il_adi;*/
+
