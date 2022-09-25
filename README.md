@@ -1,6 +1,11 @@
 # bul_map_node_postgresql
 
-
+The purpose of this project is to show the location on the map according to the entered city, municipality or neighborhood names. The project consists of 3 parts:
+1) Collecting data. This data is kept on mongodb. this project link: https://github.com/fehimecapar/getCoordinateInfo
+2) The data kept in mongodb was exported in json format and moved to the postgresql database. The reason for this is that the queries written to fetch the data on the backend side created with nodejs are more advantageous for postgresql and the data can be accessed faster using postgresql.
+3) While nodejs technology is used on the backend, prisma technology is used to work in the postgre database.
+4) Node js technology is used to use data and perform backend operations. The project using Node js technology is in this repo.
+5) The frontend side was created to show the results. vue cdn technology was used to create the frontend side. This project link: https://github.com/fehimecapar/mapProjectFrontendWithVueCdn
 
 ## Getting started
 
