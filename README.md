@@ -7,6 +7,10 @@ The purpose of this project is to show the location on the map according to the 
 4) Node js technology is used to use data and perform backend operations. The project using Node js technology is in this repo.
 5) The frontend side was created to show the results. vue cdn technology was used to create the frontend side. This project link: https://github.com/fehimecapar/mapProjectFrontendWithVueCdn
 
+This project was originally developed using mongodb. Mongodb Project Link: https://github.com/fehimecapar/mapProjectNodeJs
+
+Then the project was moved to the postgresql database. The same process is applied in both projects. The only difference is the databases and the queries and technologies required by the databases.
+
 ## Getting started
 
 To make it easy for you to get started with GitLab, here's a list of recommended next steps.
